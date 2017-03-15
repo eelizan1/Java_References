@@ -1,0 +1,82 @@
+Complexity of the Bubble Sort Algorithm
+
+Array [12, 8, 7, 5, 2]
+
+First Iteration
+    Comparison | Swaps
+    ---------------------
+    12, 8       3 - three memory access steps (12, 8, temporary bin)
+    12, 7       3
+    12, 5       3
+    12, 2       3
+
+    = 16 steps
+Array [8, 7, 5, 2, 12]
+
+Second Iteration
+    Comparison | Swaps
+    ------------------
+    8, 7        3
+    8, 5        3
+    8, 2        3
+
+    = 12 steps
+Array [7, 5, 2, 8, 12]
+
+Third Iteration
+    Comparison | Swaps
+    ------------------
+    7, 5        3
+    7, 2        3
+
+    = 8 steps
+Array [5, 2, 7, 8, 12]
+
+Fourth Iteration
+    Comparison | Swaps
+    ------------------
+    5, 2        3
+
+    = 4 steps
+Array [2, 5, 7, 8, 12]
+
+Total Steps = 40 steps for 5 elements for WORST CASE
+
+16 + 12 + 8 + 4 for 5 elements
+= 4(4 + 3 + 8 + 1) // 4 is the GCD
+
+for n elements:
+= 4(n - 1 + n - 2 + ... + 3 + 2 + 1)
+= 2 * n * (n-1)
+ Which is a quadratic formual in n
+ therfore can be written as:
+
+pn^2 + qn + r; where p and q are some constants
+
+***********************************************************
+Psudocode
+
+[2, 5, 7, 8, 12]
+
+for i = 0 to a.length - 2
+    for j = 0 to a.length - 2 - i
+    if a[i] > a[j]
+    tmp = a[j + 1]
+    a[j + 1] = a[j]
+    a[j] = tmp
+
+* Max value of j decreases by 1 because i increases by 1
+* At each step when j changes, we compare the value at jth index and at jth + 1 index (next value of j)
+
+TOTAL NUMBER OF OPERATIONS IS PROPORTIONATE TO THE SUM OF ALL THE ELEMENTS IN THE OUTER MOST COLUMN
+
+
+
+
+
+
+
+
+
+
+

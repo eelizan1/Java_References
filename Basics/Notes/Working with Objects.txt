@@ -1,0 +1,31 @@
+public class ClothingItem {
+
+	// instance variable - belongs to the INSTANCE of the ClothingItem class 
+	public String type; 
+	
+	public static void main (String[] args) {
+		ClothingItem item = new ClothingItem(); // constructor 
+		item.type = "hat"; 
+		item.displayItem(); 
+	
+	}
+	
+	// instance method - member of an instance of a class 
+	private void displayItem(){
+		System.out.println("This is a " + this.type); // 'this' refers to the instance of the class 
+	}
+
+}
+
+*if you had 'static' it would be a member of the class itself, not the instance 
+
+Instance variables and methods will deal with information pertaining to the instance of the class 
+
+String is a complex object - apart of java.lang.string 
+
+String str1 = new String("hello"); // instance of the String class 
+String str2 = "hello"; // they are the same
+
+A string is an array of characters - a collection of char in a partocilar order 
+
+String are IMMUTABLE - once you assign them a value you can't change them 
