@@ -1,0 +1,58 @@
+Procedure:
+
+Search for the smallest element.
+If smallest, swap with first item in structure now making the first element sorted.
+Next iteration, start with element after sorted and search for smallest. Smallest is swapped with the first element
+of unsorted part of array,
+otherwise, keep first element of unsorted array in same index since it's the smallest element.
+
+Repeat until all sorted.
+
+[(9), 2, 8, 12, 7]
+// swap 9 and 2
+
+[2, (9), 8, 12, 7]
+// swap 9 and 7
+
+[2, 7, (8), 12, 9]
+// keep 8
+
+[2, 7, 8, (12), 9]
+// swap 12 and 9
+
+[2, 7, 8, 9, 12]
+// done
+****************************************************************************************************
+
+Pseudocode
+
+for i = 0 to array.length - 2
+    //find index containing min element
+    minIndex = i;
+
+    // loop through all the remaining elements of the array
+    // need another loop to compare i and j
+    // where i is the current min index while j is the next element to evaluate
+    //array.length - 1 is the las element
+    for j = i + 1 to array.length - 1
+        // check
+        if (array[j] < array[minIndex])
+            //minIndex is now the array index of j
+            minIndex = j;
+        // swap
+        tmp = array[minIndex]
+        array[minIndex] = data[i]
+        data[i] = tmp
+
+
+
+
+
+
+
+
+
+
+
+
+

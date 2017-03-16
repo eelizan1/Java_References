@@ -1,0 +1,43 @@
+Think of sorting a deck of cards.
+There are three components: Unsorted, Sorted, and current element.
+An element is taken from unsorted, then if there are no currently sorted elements,
+that element will start the sorted stack.
+When another element is taken from the unsorted pile, it will be compared to the LAST placed sorted element.
+The element will be positioned depending if it is less than or greater than the last sorted element.
+If it is greater, that element is the new current sorted element and placed on top, if it is less than,
+that element will move on the next sorted element to be compared until it finds a sorted element it is greater than.
+
+*******************************************************************************************************************
+Pseudocode
+
+[5, 2, 8, 12, 7]
+
+// want to access ALL elements so length - 1
+for i = 0 to array.length - 1
+    // save element of index i
+    current = array[i]
+    // then start accessing array starting from the previous index of i
+    j = i - 1
+    // now compare elements of the array 1 by 1 with the current element going to the left
+    // It'll check if the current element is less than these elements
+    // Do this until you have reached the left most end OR when j is greater than the current element
+    while j >=0 && array[j] > greater than current
+        // while true keep shifting j to the right
+        array[j + 1] = array[j];
+        // reduce value of j by 1
+        j = j - 1;
+        // while loop ends once current > j
+     array[j + 1] = current
+
+     // array[j + 1] = current
+     // example: [2, 5, ___, 8, 12]
+        current = 7
+        j is pointing to 5, so add 1 (array[j + 1] = current)
+        to fill spot
+
+
+
+
+
+
+
