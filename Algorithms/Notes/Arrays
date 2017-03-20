@@ -1,0 +1,6 @@
+public static double getArray(int[] array) {
+    // code
+
+    // Typecasts to ensure an array double type will be returned
+    return double(sum)/(double)array.length;
+}
