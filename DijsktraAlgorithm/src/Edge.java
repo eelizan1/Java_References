@@ -5,6 +5,7 @@
  */
 public class Edge {
     private double weight;
+    // every edge will connect to two vertices
     private Vertex startVertex;
     private Vertex targetVertex;
 
@@ -13,7 +14,7 @@ public class Edge {
         this.startVertex = startVertex;
         this.targetVertex = targetVertex;
     }
-
+    // getters and setters
     public double getWeight() {
         return weight;
     }
