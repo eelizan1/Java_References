@@ -5,18 +5,24 @@
  */
 public class App {
     public static void main (String[] args) {
-        Vertex vertex0 = new Vertex("A");
-        Vertex vertex1 = new Vertex("B");
-        Vertex vertex2 = new Vertex("C");
+        Vertex vertexA = new Vertex("A");
+        Vertex vertexB = new Vertex("B");
+        Vertex vertexC = new Vertex("C");
+        Vertex vertexD = new Vertex("D");
+        Vertex vertexE = new Vertex("E");
 
         // edges
-        vertex0.addNeighbour(new Edge(1, vertex0, vertex1));
-        vertex0.addNeighbour(new Edge(3, vertex0, vertex2));
-        vertex1.addNeighbour(new Edge(1, vertex1, vertex2));
+        vertexA.addNeighbour(new Edge(6, vertexA, vertexB));
+        vertexA.addNeighbour(new Edge(1, vertexA, vertexD));
+        vertexB.addNeighbour(new Edge(2, vertexB, vertexD));
+        vertexB.addNeighbour(new Edge(2, vertexB, vertexE));
+        vertexB.addNeighbour(new Edge(5, vertexB, vertexC));
+        vertexC.addNeighbour(new Edge(5, vertexC, vertexE));
+        vertexE.addNeighbour(new Edge(1, vertexE, vertexD));
 
         DijsktraAlgorithm algorithm = new DijsktraAlgorithm();
-        algorithm.computePaths(vertex0);
+        algorithm.computePaths(vertexA);
 
-        System.out.println(algorithm.getShortestPathto(vertex2));
+        System.out.println(algorithm.getShortestPathto(vertexC));
     }
 }

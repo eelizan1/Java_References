@@ -1,0 +1,77 @@
+class Node
+	
+	name			 // name of node 	
+	min_distance	 // min distance from starting point to given node 
+	Node predecessor // is the previous vertex in the shortest path tree  
+	
+*******************************************************************************
+1. Initialization of variables 
+2. Construct Heap to add all the vertices of the graph to the heap 
+3. Then while queue is not empty get minimum distance vertex(greedy algorithm)
+4. With vertex check for neighbouring vertex for any better solution for a shorter path 
+4. Return distance
+
+function DijstraAlgorithm (Graph, Source)
+	
+	// Initialization phase: Starting point, source, is 0 and all other nodes are infinity
+	----------------------------------------------------------------------------------------------------------------------------------------------		
+	
+	distance[source] = 0  								// starting source 
+	create vertex queue Q 								// a queue to store vertices 
+	
+														// iterate thourgh every vertext in the graph 
+	for v in Graph
+		distance[v] = inf								// set distance to infinity 	
+		predecessor[v] = undefined 						// becuase the previous node in the shortest path is unknown 				
+		add v to Q										// add every single vertex in the graph to the queue (priority queue adbstract data type)	
+	-----------------------------------------------------------------------------------------------------------------------------------------------	
+	
+	while Q not empty 
+		u = vertex in Q with min distance 				// get the vertex from the queue with the minimum distance - USE HEAPS WHICH WILL TELL US FOR CERTAIN THE MINUM ITEM IS AT THE ROOT
+		remove v from Q									// restructure the queue which is why its logarithmic time complexity 
+														
+														// with for loop, check if there's any shorter path to the given vertex (the checking part of the algorithm)	
+		for each neighbour v of undefined	
+			tempDistance = distance[u] + distanceBetween(u, v)
+			if tempDistance < distance[v]
+				distance[v] = tempDistance
+				predecessor[v] = u
+	
+	return the distance[] 								// Edge weight is stored here 
+														// store this distance somewhere to add up all the edge weights
+
+*******************************************
+Heap Content will contain the adjacent vertices 
+ex. 
+	A 	-5-> B
+		-8-> H
+		-9-> E	
+	Node A goes to B, H, and E
+	
+	So heap contains B-5, H-8, E-9 
+	Next node to visit: take smaller weight, B with edge weight of 5 
+	Mark A as visited 
+	Remove B from queue 
+	
+	B is now new node and repeat process 
+
+If heap content is empty, terminate the program 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
