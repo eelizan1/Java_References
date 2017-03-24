@@ -1,0 +1,29 @@
+Heaps
+
+A heap is a binary tree which is: 
+	- Complete
+	- Every nodes key is larger than the keys of it's children
+	
+Deleting the root
+	Bring the last node of the tree to the root then adjust tree in order 
+	Time complexity of deleting root: O(1 + log2n) 
+									  1: put the last element in the root	
+									  log2n: Fixing the heap 
+	Overall time complexity: O(log2n)
+	
+Inserting an Item
+	Can only insert at the bottom of the tree - the last spot 
+	After insert "bubble" inserted if it goes against the 2nd property of heaps - parent node must be greater than it's children
+	
+	Overall time complexity: O(log2n)
+	Get max: O(1) // since it's the root node 
+	
+Representing Heaps as Arrays
+
+ Use the 0 based index and 0 as the root node then go in order 
+ 
+Building A Heaps:
+	First place value from tree in array starting at index 0
+	Then fix heap with the newly sorted value if need to 	
+	
+	Time Complexity for building a heap: O(nlogn)

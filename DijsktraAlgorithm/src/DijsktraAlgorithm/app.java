@@ -68,6 +68,7 @@ public class app {
         System.out.println("Shortest path from A to G: " + algorithm.getShortestPathTo(vertexG));
         System.out.println("Shortest path from A to H: " + algorithm.getShortestPathTo(vertexH));
 
+        System.out.println();
         // add distances to array
         minDistance.add(vertexA.getDistance());
         minDistance.add(vertexB.getDistance());
