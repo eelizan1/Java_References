@@ -74,6 +74,7 @@ public class DijkstraShortestPath {
         return distance;
     }
 
+
     private Vertex<Integer> getVertexForEdge(Vertex<Integer> v, Edge<Integer> e){
         return e.getVertex1().equals(v) ? e.getVertex2() : e.getVertex1();
     }
@@ -107,5 +108,13 @@ public class DijkstraShortestPath {
         Vertex<Integer> sourceVertex = graph.getVertex(1);
         Map<Vertex<Integer>,Integer> distance = dsp.shortestPath(graph, sourceVertex);
         System.out.print(distance);
+
+        int sum = 0;
+        for(int f : distance.values()){
+            sum += f;
+        }
+
+        System.out.println();
+        System.out.println(sum);
     }
 }

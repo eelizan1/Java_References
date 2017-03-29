@@ -53,7 +53,7 @@ public class app {
         // Vertex: H
         // Neighbors: C, F
         vertexH.addNeighbour(new Edge(7, vertexH, vertexC));
-        vertexH.addNeighbour(new Edge(6, vertexF, vertexF));
+        vertexH.addNeighbour(new Edge(6, vertexH, vertexF));
         // instantiate Dijsktras Algorithm
         DijsktraAlgorithm algorithm = new DijsktraAlgorithm();
         // source us Vertex0

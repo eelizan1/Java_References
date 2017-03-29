@@ -55,6 +55,8 @@ public class BinaryMinHeap<T> {
         node.key = key;
         // add new node to node list
         allNodes.add(node);
+
+        // heapifyUp();
         int size = allNodes.size();
         // established the top node as current
         int current = size - 1;
@@ -63,7 +65,6 @@ public class BinaryMinHeap<T> {
         // puts current node in the
         nodePosition.put(node.key, current);
 
-        // heapifyUp();
         while (parentIndex >= 0) {
             Node parentNode = allNodes.get(parentIndex);
             Node currentNode = allNodes.get(current);
@@ -145,6 +146,8 @@ public class BinaryMinHeap<T> {
 
         int currentIndex = 0;
         size--;
+
+        // heapifyDown()
         while(true){
             int left = 2*currentIndex + 1;
             int right = 2*currentIndex + 2;
