@@ -4,7 +4,7 @@
  */
 public class EnhancedPlayer {
     private String name;
-    // default health 
+    // default health
     private int health = 100;
     private String weapon;
     private int lives = 5;
