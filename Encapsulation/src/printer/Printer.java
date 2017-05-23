@@ -1,6 +1,6 @@
 package printer;
 
-/**
+/*
  * Created by eeliz_000 on 5/16/2017.
  */
 public class Printer {
@@ -39,11 +39,9 @@ public class Printer {
             System.out.println("Not printing in duplex mode");
         }
     }
-
     /*
         GETTERS SETTERS
      */
-
     public int getTonerlevel() {
         return tonerlevel;
     }
