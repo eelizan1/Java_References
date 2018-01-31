@@ -5,7 +5,8 @@ public class Main {
         // dog object using Animal constructor
         Dog dog1 = new Dog("Malamute", 8, 20, 2, 4, 1, 2, "silky");
         dog1.eat();
-//        dog1.move();
+       // dog1.walk();
+        dog1.run();
 
     }
 }
